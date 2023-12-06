@@ -65,6 +65,6 @@ public class GoodSuspend {
         System.out.println("suspend t1 2 sec");
         Thread.sleep(2000);
         System.out.println("resume t1");
-        t1.suspendMe();
+        t1.resumeMe();
     }
 }
