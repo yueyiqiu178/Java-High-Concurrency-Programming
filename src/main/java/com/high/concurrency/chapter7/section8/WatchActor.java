@@ -41,13 +41,13 @@ public class WatchActor extends UntypedActor {
         if (msg instanceof MyWorker.Msg) {
             router.route(msg, sender());
         } else if (msg instanceof Terminated) {
-            router = router.removeRoutee(((Terminated)msg).actor());
-            System.out.println(((Terminated)msg).actor().path() + " is closed, routees = " + router.routees().size());
-            if (router.routees().size() == 0) {
-                System.out.println("Close system");
-                RouteMain.flag.send(false);
-                getContext().system().shutdown();
-            }
+//            router = router.removeRoutee(((Terminated)msg).actor());
+//            System.out.println(((Terminated)msg).actor().path() + " is closed, routees = " + router.routees().size());
+//            if (router.routees().size() == 0) {
+//                System.out.println("Close system");
+//                RouteMain.flag.send(false);
+//                getContext().system().shutdown();
+//            }
         } else {
             unhandled(msg);
         }
