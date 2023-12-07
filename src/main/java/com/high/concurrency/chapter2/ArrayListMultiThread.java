@@ -11,6 +11,7 @@ import java.util.List;
 public class ArrayListMultiThread {
 
     static List<Integer> list = new ArrayList<Integer>();
+    //static Vector<Integer> list = new Vector<Integer>();
 
     public static class AddThread implements Runnable {
 
