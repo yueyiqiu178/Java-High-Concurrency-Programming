@@ -11,7 +11,8 @@ import java.util.Map;
 public class HashMapMultiThread {
 
     static Map<String, String> map = new HashMap<String, String>();
-
+    //static Map<String, String> map = new ConcurrentHashMap<String, String>();
+    
     public static class AddThread implements Runnable {
         int start = 0;
 
