@@ -66,6 +66,37 @@ public class ReadWriteLockDemo {
             }
         };
 
+        /*
+        
+        Thread[] rThreads = new Thread[18];
+        Thread[] wThreads = new Thread[12];
+        
+        System.out.println(System.currentTimeMillis());
+      
+        for(int i=0;i<rThreads.length;i++) {
+        	rThreads[i] = new Thread(readRunnable);
+        	rThreads[i].start();
+        	//rThreads[i].join();
+        }
+        
+        for(int i=0;i<wThreads.length;i++) {
+        	wThreads[i] = new Thread(writeRunnable);
+        	wThreads[i].start();
+        	//wThreads[i].join();
+        }
+        
+        for(int i=0;i<rThreads.length;i++) {
+        	rThreads[i].join();
+        }
+        
+        for(int i=0;i<wThreads.length;i++) {
+        	wThreads[i].join();
+        }
+        
+        System.out.println(System.currentTimeMillis());
+        
+        */
+        
         for (int i = 0; i < 18; i++) {
             new Thread(readRunnable).start();
         }
