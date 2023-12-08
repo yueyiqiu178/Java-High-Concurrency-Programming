@@ -8,7 +8,7 @@ package com.high.concurrency.chapter5;
 public class StaticSingleton {
 
     private StaticSingleton() {
-        System.out.println();
+        System.out.println("StaticSingleton is create");
     }
 
     private static class SingletonHolder {
